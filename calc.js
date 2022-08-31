@@ -3,6 +3,7 @@ let screen = document.getElementById("screen")
 let place1 = document.getElementById("place1")
 let place2 = document.getElementById("place2")
 let way = document.getElementById("way")
+let ra = null        // skapar lite variablar
 
 
 document.getElementById("num_one").addEventListener('click', num_one);
@@ -21,75 +22,67 @@ document.getElementById("+").addEventListener('click', plus);
 document.getElementById("-").addEventListener('click', negativ2);
 document.getElementById("*").addEventListener('click', times);
 document.getElementById("/").addEventListener('click', devided);
-document.getElementById("ans").addEventListener('click', ans);
+document.getElementById("ans").addEventListener('click', ans);  // lite knappar
 
-if (way == null){
-    function num_one() {
-        console.log("1");
+console.log(way)
+function num_one() {   // gör så att nummer hamnar på screenen
+    if (ra == null){
         place1.append("1")
+        console.log("test")
     }
-    function num_two() {
-        console.log("2");
-        place1.append("2")
+    else{
+        place2.append("1")
+        console.log("hmmmm")
     }
-    function num_tre() {
-        console.log("3");
-        place1.append("3")
-    }
-    function num_fore() {
-        console.log("4");
-        place1.append("4")
-    }
-    function num_five() {
-        console.log("5");
-        place1.append("5")
-    }
-    function num_six() {
-        console.log("6");
-        place1.append("6")
-    }
-    function num_seven() {
-        console.log("7");
-        place1.append("7")
-    }
-    function num_eight() {
-        console.log("8");
-        place1.append("8")
-    }
-    function num_nine() {
-        console.log("9");
-        place1.append("9")
-    }
-    function num_zero() {
-        console.log("0");
-        place1.append("0")
-    }
-    function tenth() {
-        place1.append(",")
-    }
-    function negativ1() {
-        splace1.append("-")
-    }
+    
+}
+function num_two() {
+    place1.append("2")
+}
+function num_tre() {
+    place1.append("3")
+}
+function num_fore() {
+    place1.append("4")
+}
+function num_five() {
+    place1.append("5")
+}
+function num_six() {
+    place1.append("6")
+}
+function num_seven() {
+    place1.append("7")
+}
+function num_eight() {
+    place1.append("8")
+}
+function num_nine() {
+    place1.append("9")
+}
+function num_zero() {
+    place1.append("0")
+}
+function tenth() {
+    place1.append(",")
+}
+function negativ1() {
+    place1.append("-")
 }
 
-function negativ2() {
-    console.log("-");
+function negativ2() {  //gör så att det kommer +, -, * eller / på screenen
     way.append("-")
 }
 function plus() {
-    console.log("+");
     way.append("+")
 }
 function times() {
-    console.log("*");
     way.append("*")
 }
 function devided() {
-    console.log("/");
     way.append("/")
 }
 function ans() {
-    console.log("svar");
     way.append("svar")
 }
 
