@@ -19,6 +19,18 @@ body{
     align-items: center;
     position: relative;
 }
+#screen{
+    width: 375px;
+    height: 100px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 25px;
+    border-radius: 10px;
+}
+.button{
+    width: 60px;
+    height: 40px;
+}
 #nummpad{
     background-color: tomato;
     position: absolute;
@@ -29,7 +41,7 @@ body{
     grid-gap: 10px;
     padding:15px;
 }
-#mathpad{
+#mathpad1{
     background-color: greenyellow;
     position: absolute;
     bottom: 25px;
@@ -40,18 +52,18 @@ body{
     padding:7px;
     right: 25px;
 }
-.button{
-    width: 60px;
-    height: 40px;
-}
-#screen{
-    width: 375px;
-    height: 100px;
-    background-color: whitesmoke;
+#mathpad2{
+    background-color: greenyellow;
     position: absolute;
-    top: 25px;
-    border-radius: 10px;
+    bottom: 25px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding:7px;
+    left: 25px;
 }
+
 #systempad{
     background-color: aqua;
     position: absolute;
@@ -63,7 +75,7 @@ body{
     right: 25px;
     bottom: 290px;
 }
-#suspad{
+#parpad{
     background-color: orange;
     position: absolute;
     display: grid;
@@ -74,5 +86,17 @@ body{
     bottom: 255px;
     right: 110px;
 }
+#tanpad{
+    background-color: orange;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 7px;
+    padding: 7px;
+    bottom: 255px;
+    left: 40px;
+}
+
 
 
