@@ -86,7 +86,7 @@ body{
     bottom: 255px;
     right: 110px;
 }
-#tanpad{
+#trigpad{
     background-color: orange;
     position: absolute;
     display: grid;
@@ -95,7 +95,18 @@ body{
     grid-gap: 7px;
     padding: 7px;
     bottom: 255px;
-    left: 40px;
+    left: 25px;
+}
+#logpad{
+    background-color: blueviolet;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    padding:7px;
+    bottom: 315px;
+    right: 110px;
 }
 
 
