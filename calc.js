@@ -1,5 +1,11 @@
 
 let place = document.getElementById("place");
+let graf = document.getElementById("graf");
+let graf1 = document.getElementById("graf1");
+let graf2 = document.getElementById("graf2");
+
+graf1.style.display = "none"
+graf2.style.display = "none"
 const rek = [];  //dena arrayen innehåler hella ekvationen   
 const clos = [];  //dena arrrayen innehåler alla nummer ifrån ekvationen
 const way = [];   //dena arrrayen innehåler alla "sät" som matten händer på ifrån ekvationen
@@ -45,7 +51,8 @@ document.getElementById("arkcos").addEventListener('click', function(){button("a
 document.getElementById("ln").addEventListener('click', function(){button("ln")});   
 document.getElementById("log").addEventListener('click', function(){button("log")});   
 document.getElementById("pro").addEventListener('click', function(){button("%")}); 
-document.getElementById("x").addEventListener('click', function(){button("x")});               // några knappar
+document.getElementById("x").addEventListener('click', function(){button("x")});  
+document.getElementById("grafbutton").addEventListener('click', show);              // några knappar
 document.getElementById("ans").addEventListener('click', anse);
 document.getElementById("clear").addEventListener('click', clear); 
 document.getElementById("back").addEventListener('click', back); 
@@ -69,6 +76,7 @@ function negativ() {   // dena hanterar minus så det går att få tag på negat
 
 function clear() {     // gör så att skärmen töms
     rek.length = 0;
+    graf.innerHTML = ""
     place.innerHTML = rek
     
 }
@@ -77,6 +85,20 @@ function back() {    //tillåter en att backa
     place.innerHTML = rek.join("");
     
 }
+
+function show() {    //visar grafer
+    console.log("test")
+   
+    if (graf1.style.display == "none") {
+        graf1.style.display = "block";
+        graf2.style.display = "block";
+      } else {
+        graf1.style.display = "none"
+        graf2.style.display = "none"
+      }
+    
+}
+
 
 
 function anse() {  //svars funktionen
@@ -107,12 +129,35 @@ function anse() {  //svars funktionen
             slice = i+1
         }
     }
-    
+
+
     rek.push("")
     ans = rek.slice(slice,-1);      //gör så att slutet av clos blir koräkt
     clos.push(ans.join(""))
 
-
+    for (let i = 0; i < clos.length; i++){
+        if (clos[i] == "x"){
+            if (way[i] == "(") {
+                graflist.push("x"+way[i+1])
+                way[i+1] = ""
+            }
+            else if (way[i] == "√"||way[i] == "tan"||way[i] == "sin"||way[i] == "cos"||way[i] == "arktan"||way[i] == "arksin"||way[i] == "arkcos"||way[i] == "ln"||way[i] == "log"){
+                graflist.push(way[i]+"x")
+                way[i] = ""
+            }
+            else if (clos[i] = 0){
+                graflist.push("x"+way[i])
+                way[i] = ""
+            }
+            else{
+                graflist.push(way[i]+"x")
+                way[i] = ""
+            }
+            clos[i] = ""
+            
+        }
+    }
+    wayLength = way.length
     fixlist(way, clos, wayLength)
     console.log("test1 " + clos)
     console.log("hmmmm1 " + way)
@@ -195,9 +240,15 @@ function anse() {  //svars funktionen
     console.log("test8 " + clos)
     console.log("hmmmm8 " + way)
 
-    place.innerHTML = ""                            //skriver utt svaret och resetar 
+    place.innerHTML = ""                            //skriver utt svaret
     place.append(answer)
-    way.length = 0
+
+    if (rek[0] == "y"){
+        grafs()
+    }
+    
+    
+    way.length = 0          //resetar
     rek.length = 0;
     clos.length = 0;
     parLength = 0;
@@ -209,6 +260,13 @@ function parcalc() {                            // innehåller alla räkesät f�
 
     wayLength = waypar.length
     fixlist(waypar, clospar, wayLength)
+
+    if (waypar.length == 0){                           // om det bara står nummer
+        parAnswer = clospar[0]
+    }
+    if (clospar.length == 0){                           // om det bara står nummer
+        parAnswer = "1"
+    }
 
     unshift(waypar, clospar)
     console.log("test co1 " + clospar)

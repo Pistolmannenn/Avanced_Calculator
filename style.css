@@ -21,7 +21,7 @@ body{
 }
 #screen{
     width: 375px;
-    height: 100px;
+    height: 200px;
     background-color: whitesmoke;
     position: absolute;
     top: 25px;
@@ -107,6 +107,36 @@ body{
     padding:7px;
     bottom: 315px;
     right: 110px;
+}
+#grafpad{
+    background-color: yellow;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    padding:7px;
+    top: 235px;
+    left: 25px;
+}
+
+#place{
+    position: absolute;
+}
+
+#graf1{
+    background-color: black;
+    position: absolute;
+    width: 3px;
+    height: 200px;
+    left: 182px;
+}
+#graf2{
+    background-color: black;
+    position: absolute;
+    width: 375px;
+    height: 3px;
+    top: 95px;
 }
 
 
