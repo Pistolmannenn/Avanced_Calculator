@@ -112,7 +112,7 @@ body{
     background-color: yellow;
     position: absolute;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-gap: 5px;
     padding:7px;
@@ -124,20 +124,7 @@ body{
     position: absolute;
 }
 
-#graf1{
-    background-color: black;
-    position: absolute;
-    width: 3px;
-    height: 200px;
-    left: 182px;
-}
-#graf2{
-    background-color: black;
-    position: absolute;
-    width: 375px;
-    height: 3px;
-    top: 95px;
-}
+
 
 
 
