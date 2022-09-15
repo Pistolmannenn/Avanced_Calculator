@@ -42,6 +42,7 @@ function grafs(){               //skriver ut grafer
       });
       graflist.length = 0                   //reset
       garfAnswer = 0
+      truegraflist = ""
 }
 
 function generategraf(value, i1, i2, step = 1) {            //kalkuler alla x och y värden till grafen

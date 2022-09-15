@@ -10,8 +10,8 @@ function parcalc() {                            // räknar allt inanför parante
     
 
     unshift(waypar, clospar)
-    console.log("test co1 " + clospar)
-    console.log("test way1 " + waypar)
+    console.log("test co0 " + clospar)
+    console.log("test way0 " + waypar)
 
 
     wayLength = waypar.length
@@ -19,7 +19,9 @@ function parcalc() {                            // räknar allt inanför parante
 
 
     fixlist(waypar, clospar, wayLength) 
-
+    unshift(waypar, clospar)
+    console.log("test co1 " + clospar)
+    console.log("test way1 " + waypar)
 
     wayLength = waypar.length
     parAnswer = toThePowerOf(waypar, clospar, wayLength, parAnswer)               //räknar upphöjt till för paranteser

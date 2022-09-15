@@ -10,8 +10,8 @@
 </head>
 <body>
     <div id = "calculator">
-        <div id = "screen">   <!-- skapar screenen -->
-            <p id = "place"></p>
+        <div id = "screen">   <!-- kärmen -->
+            <p id = "place"></p>        <!-- här skrivs ekvationerna och nummerna -->
             <canvas id="graf" style="width:100%;height:100%;"></canvas>    <!-- används för att skapa graferna -->
         </div>
         <div id = "nummpad">
@@ -25,32 +25,32 @@
             <button class = "button" id = "num_eight">8</button>
             <button class = "button" id = "num_nine">9</button>
             <button class = "button" id = "num_zero">0</button>
-            <button class = "big" class = "button"  id = "dot">,</button>
-            <button class = "big" class = "button"  id = "negativ">-</button>
+            <button class = "big"    id = "dot">,</button>
+            <button class = "big"    id = "negativ">-</button>
 
         </div>
         <div id = "mathpad1">
-            <button class = "big" class = "button" id = "/">÷</button> <!-- grudläggande mate -->
-            <button class = "big" class = "button" id = "*">*</button>
-            <button class = "big" class = "button" id = "-">-</button>
-            <button class = "big" class = "button" id = "+">+</button>
+            <button class = "big"    id = "/">÷</button> <!-- grudläggande mate -->
+            <button class = "big"    id = "*">*</button>
+            <button class = "big"    id = "-">-</button>
+            <button class = "big"    id = "+">+</button>
             <button class = "button" id = "ans">ans</button>
         </div>
         <div id = "systempad">
             <button class = "button" id = "clear">clear</button>
-            <button class = "big" class = "button" id = "back">←</button>
+            <button class = "big"    id = "back">←</button>
         </div>
         <div id = "parpad">
 
         </div>
         <div id = "mathpad2">
-            <button class = "big" class = "button" id = "**">^</button> 
+            <button class = "big"    id = "**">^</button> 
             <button class = "button" id = "sqrt">√</button>
             <button class = "button" id = "pi">π</button>
             <button class = "button" id = "e">e</button>
         </div>
         <div id = "trigpad">
-            <button class = "button" id = "tan">tan</button> <!-- trigonometri -->
+            <button class = "button" id = "tan">tan</button>        <!-- trigonometri -->
             <button class = "button" id = "arktan">arktan</button>
             <button class = "button" id = "sin">sin</button>
             <button class = "button" id = "arksin">arksin</button> 
@@ -58,18 +58,18 @@
             <button class = "button" id = "arkcos">arkcos</button>
         </div>
         <div id = "logpad">
-            <button class = "button" id = "ln">ln</button>
+            <button class = "button" id = "ln">ln</button>          <!-- logaritmer -->
             <button class = "button" id = "log">log</button>
             <button class = "button" id = "pro">%</button>
             <button class = "button" id = "x">x</button>
-            <button class = "button" id = "parleft">(</button> <!-- paranteser -->
+            <button class = "button" id = "parleft">(</button>      <!-- paranteser -->
             <button class = "button" id = "parright">)</button>
         </div>
         <div id = "grafpad">
             <button class = "button" id = "yequl">y =</button>
         </div>
     </div>
-    <script src ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>     <!-- behövs för att grafer ska fungera -->
     <script src="button.js"></script>
     <script src="ans.js"></script>
     <script src="par.js"></script>

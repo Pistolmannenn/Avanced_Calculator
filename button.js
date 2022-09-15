@@ -1,6 +1,8 @@
 
 let place = document.getElementById("place");
 let graf = document.getElementById("graf");
+let context = graf.getContext('2d');
+
 
 const rek = [];              //dena arrayen innehåler hella ekvationen   
 const clos = [];            //dena arrayen innehåler alla nummer ifrån ekvationen
@@ -69,10 +71,7 @@ function negativ() {   // dena hanterar minus så det går att få tag på negat
 }
 
 function clear() {     // gör så att skärmen töms
-    rek.length = 0;
-    graf.innerHTML = rek
-    place.innerHTML = rek
-    
+    location.reload()
 }
 function back() {    //tillåter en att backa
     rek.pop();
