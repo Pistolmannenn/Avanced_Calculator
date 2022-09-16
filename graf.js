@@ -18,6 +18,7 @@ function y() {
 
 
 function grafs(){               //skriver ut grafer
+    console.log(graflist)
     if(garfAnswer == 0){
         graflist.push(answer)
     }

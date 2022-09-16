@@ -67,8 +67,14 @@ function anse() {  //svars funktionen
                     way[i+1] = ""
                 }
                 else if (way[i] == "_"){
-                    graflist.push("-")
-                    graflist.push("x")
+                     if (i == 0){
+                        graflist.push("x")
+                        graflist.push("-")
+                    }
+                    else{
+                        graflist.push("-")
+                        graflist.push("x")
+                    }
                     way[i] = ""
                 }
                 else if (i == 0){
@@ -101,8 +107,8 @@ function anse() {  //svars funktionen
                 clos[i] = ""
             }
             else if (way[i] == "_"){
-                graflist.push("-")
                 graflist.push(clos[i])
+                graflist.push("-")
                 way[i] = ""
                 clos[i] = ""
             }
