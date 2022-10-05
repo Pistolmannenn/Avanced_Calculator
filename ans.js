@@ -176,7 +176,7 @@ function anse() {  //svars funktionen
         answer = clos[0]
     }
 
-    wayLength = waypar.length
+    wayLength = way.length
     answer = percent(way, clos, wayLength, answer)          //räknar procent
 
 
